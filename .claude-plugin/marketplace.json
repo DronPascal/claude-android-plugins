@@ -29,6 +29,14 @@
       "author": { "name": "DronPascal" },
       "source": "./plugins/android-migrations",
       "category": "development"
+    },
+    {
+      "name": "android-performance",
+      "description": "Android performance skills (R8 analyzer). Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": { "name": "DronPascal" },
+      "source": "./plugins/android-performance",
+      "category": "development"
     }
   ]
 }

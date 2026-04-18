@@ -1,0 +1,12 @@
+{
+  "name": "android-performance",
+  "version": "0.1.0",
+  "description": "Android performance skills: R8 analyzer (more to come). Adapted from android/skills (Apache 2.0).",
+  "author": { "name": "DronPascal" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DronPascal/claude-android-plugins",
+    "directory": "plugins/android-performance"
+  },
+  "license": "MIT"
+}
