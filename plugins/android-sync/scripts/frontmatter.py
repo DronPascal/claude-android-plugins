@@ -67,6 +67,21 @@ def update_upstream_commit(text: str, new_sha: str) -> str:
     return new_fm + body
 
 
+def attribution_pointer(plugin_depth: int = 4) -> str:
+    """Return the 2-line attribution pointer block (with surrounding blank lines).
+
+    Placed at the start of body in every ported SKILL.md. Required by
+    Apache 2.0 — must survive upstream sync.
+    """
+    notice_rel = "../" * plugin_depth + "NOTICE.md"
+    return (
+        "\n"
+        f"> Adapted from [android/skills](https://github.com/android/skills) (Apache 2.0).\n"
+        f"> See [{notice_rel}]({notice_rel}).\n"
+        "\n"
+    )
+
+
 def build(
     name: str,
     description: str,
@@ -81,7 +96,6 @@ def build(
 
     Returns header ending with a trailing blank line; caller appends body.
     """
-    notice_rel = "../" * plugin_depth + "NOTICE.md"
     return (
         "---\n"
         f"name: {name}\n"
@@ -93,10 +107,7 @@ def build(
         f"  commit: {commit}\n"
         f"  license: Apache-2.0\n"
         "---\n"
-        "\n"
-        f"> Adapted from [android/skills](https://github.com/android/skills) (Apache 2.0).\n"
-        f"> See [{notice_rel}]({notice_rel}).\n"
-        "\n"
+        + attribution_pointer(plugin_depth)
     )
 
 
@@ -143,6 +154,14 @@ def _run_self_tests() -> None:
     assert "  path: x/y/z\n" in built
     assert "  commit: cafebabe\n" in built
     assert "../../../../NOTICE.md" in built
+
+    # attribution_pointer
+    ptr = attribution_pointer()
+    assert ptr.startswith("\n> Adapted from [android/skills]"), "pointer prefix"
+    assert "../../../../NOTICE.md" in ptr
+    assert ptr.endswith("\n\n"), "pointer trailing blank"
+    # build() should include the pointer:
+    assert ptr in built, "build() output must contain attribution_pointer"
 
     print("frontmatter.py: all self-tests passed")
 

@@ -159,12 +159,12 @@ def main() -> int:
         snapshot_old = run_dir / f"{plugin}__{skill}.old.SKILL.md"
         snapshot_old.write_text(skill_md_our.read_text())
 
-        # Replace body using upstream at HEAD.
+        # Replace body using upstream at HEAD, preserving attribution pointer.
         upstream_skill = (UPSTREAM_CLONE / path / "SKILL.md").read_text()
         upstream_body = frontmatter.extract_body(upstream_skill)
         our_text = skill_md_our.read_text()
         our_fm, _ = frontmatter.split(our_text)
-        our_text_new = our_fm + upstream_body
+        our_text_new = our_fm + frontmatter.attribution_pointer() + upstream_body
         # Update upstream.commit.
         our_text_new = frontmatter.update_upstream_commit(our_text_new, head_sha)
 
