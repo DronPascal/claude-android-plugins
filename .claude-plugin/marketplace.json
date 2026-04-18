@@ -13,6 +13,14 @@
       "author": { "name": "DronPascal" },
       "source": "./plugins/android-sync",
       "category": "productivity"
+    },
+    {
+      "name": "android-core",
+      "description": "Always-on Android skills: Navigation-3, edge-to-edge. Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": { "name": "DronPascal" },
+      "source": "./plugins/android-core",
+      "category": "development"
     }
   ]
 }
