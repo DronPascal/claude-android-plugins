@@ -21,6 +21,14 @@
       "author": { "name": "DronPascal" },
       "source": "./plugins/android-core",
       "category": "development"
+    },
+    {
+      "name": "android-migrations",
+      "description": "Android migration skills: XML→Compose, AGP-9, Play Billing. Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": { "name": "DronPascal" },
+      "source": "./plugins/android-migrations",
+      "category": "development"
     }
   ]
 }

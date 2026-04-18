@@ -9,6 +9,9 @@ This marketplace contains skills adapted from [android/skills](https://github.co
 |---|---|---|---|
 | android-core | edge-to-edge | system/edge-to-edge/ | b281881e3fbe044d29b4ea757de06758a4ca81ec |
 | android-core | navigation-3 | navigation/navigation-3/ | b281881e3fbe044d29b4ea757de06758a4ca81ec |
+| android-migrations | agp-9-upgrade | build/agp/agp-9-upgrade/ | b281881e3fbe044d29b4ea757de06758a4ca81ec |
+| android-migrations | migrate-xml-views-to-compose | jetpack-compose/migration/migrate-xml-views-to-jetpack-compose/ | b281881e3fbe044d29b4ea757de06758a4ca81ec |
+| android-migrations | play-billing-upgrade | play/play-billing-library-version-upgrade/ | b281881e3fbe044d29b4ea757de06758a4ca81ec |
 <!-- table-end -->
 
 ## Modifications from upstream
