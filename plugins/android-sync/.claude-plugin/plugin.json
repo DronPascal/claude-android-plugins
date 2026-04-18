@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "description": "Keeps android/skills-derived plugins in sync with upstream. Exposes /android-sync:update.",
   "author": { "name": "DronPascal" },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DronPascal/claude-android-plugins",
-    "directory": "plugins/android-sync"
-  },
+  "repository": "https://github.com/DronPascal/claude-android-plugins",
   "license": "MIT"
 }
