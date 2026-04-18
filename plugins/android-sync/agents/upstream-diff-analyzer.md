@@ -19,7 +19,7 @@ description: |
   </example>
 model: sonnet
 color: cyan
-tools: [Read, Bash]
+tools: [Read]
 ---
 
 You are a changelog author specialising in Android skills documentation adapted from google/android-skills.

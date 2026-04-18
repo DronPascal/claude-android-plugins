@@ -82,7 +82,15 @@ def body_changed(old_sha: str, new_sha: str, upstream_path: str) -> bool:
 
 
 def rsync_refs(src: Path, dst: Path) -> None:
-    """rsync -a --delete src/ dst/ (both dirs). Skip if src missing."""
+    """rsync -a --delete src/ dst/ (both dirs). Skip if src missing.
+
+    Guards against path-traversal: `src` must resolve inside UPSTREAM_CLONE.
+    NOTICE.md upstream_path values flow here, so a malformed entry (e.g.
+    '../../../etc') would otherwise make rsync --delete escape the clone.
+    """
+    src = src.resolve()
+    if not src.is_relative_to(UPSTREAM_CLONE.resolve()):
+        raise ValueError(f"rsync src escapes upstream clone: {src}")
     if not src.is_dir():
         if dst.exists():
             shutil.rmtree(dst)
