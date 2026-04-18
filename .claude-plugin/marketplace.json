@@ -5,5 +5,14 @@
   "owner": {
     "name": "appascal"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "android-sync",
+      "description": "Keeps android/skills-derived plugins in sync with upstream. Exposes /android-sync:update.",
+      "version": "0.1.0",
+      "author": { "name": "DronPascal" },
+      "source": "./plugins/android-sync",
+      "category": "productivity"
+    }
+  ]
 }
