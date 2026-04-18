@@ -1,0 +1,9 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-android-plugins",
+  "description": "Claude Code plugins for Android development (Kotlin, Compose, KMP, Navigation, Performance)",
+  "owner": {
+    "name": "appascal"
+  },
+  "plugins": []
+}
