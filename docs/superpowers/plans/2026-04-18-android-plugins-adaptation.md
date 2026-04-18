@@ -737,7 +737,7 @@ grep -q '^name: navigation-3$'          "$SKILL" || { echo "FAIL: name frontmatt
 grep -q '^  source: android/skills$'    "$SKILL" || { echo "FAIL: upstream.source"; exit 1; }
 grep -q '^  path: navigation/navigation-3$' "$SKILL" || { echo "FAIL: upstream.path"; exit 1; }
 grep -q '^  license: Apache-2.0$'       "$SKILL" || { echo "FAIL: license"; exit 1; }
-grep -q 'android-skills](https://github.com/android/skills)' "$SKILL" || { echo "FAIL: attribution"; exit 1; }
+grep -q 'Adapted from \[android/skills\]' "$SKILL" || { echo "FAIL: attribution"; exit 1; }
 
 # Description stub present (TODO).
 grep -q 'TODO: rewrite' "$SKILL" || { echo "FAIL: description stub missing"; exit 1; }
