@@ -3,13 +3,15 @@ name: migrate-xml-views-to-compose
 description: >
   This skill should be used when the user asks to "migrate XML to Compose",
   "convert XML views to Jetpack Compose", "migrate legacy Views",
-  "adopt Compose incrementally", "replace XML layouts with Compose",
-  "Compose interop with View", or mentions XML-to-Compose migration,
-  ComposeView, AndroidView, or incremental Compose adoption.
+  "adopt Compose incrementally", "migrate fully to Compose",
+  "Compose-only migration", "single-Activity Compose with Navigation 3",
+  "replace XML layouts with Compose", "Compose interop with View", or
+  mentions XML-to-Compose migration, ComposeView, AndroidView,
+  AndroidFragment, or either hybrid (incremental) or Compose-only adoption.
 upstream:
   source: android/skills
   path: jetpack-compose/migration/migrate-xml-views-to-jetpack-compose
-  commit: b281881e3fbe044d29b4ea757de06758a4ca81ec
+  commit: 07302ca15e21d827cab5ca64d46407fb51dbe0aa
   license: Apache-2.0
 ---
 
@@ -53,7 +55,7 @@ following the logic in [references/identify-optimal-xml-candidate.md](references
 
 Analyze the identified XML View's structure, hierarchy, and implementation
 details.
-Use [references/analysis-of-the-project-and-layout.md](references/analysis-of-the-project-and-layout.md) to
+Use [references/analysis-of-the-project-and-layout.md](https://developer.android.com/agents/skills/jetpack-compose/migration/migrate-xml-views-to-jetpack-compose/references/analysis-of-the-project-and-layout) to
 guide your technical audit of the layout and surrounding project context.
 
 ### Step 3: Create a plan

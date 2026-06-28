@@ -10,7 +10,7 @@ description: >
 upstream:
   source: android/skills
   path: system/edge-to-edge
-  commit: b281881e3fbe044d29b4ea757de06758a4ca81ec
+  commit: 07302ca15e21d827cab5ca64d46407fb51dbe0aa
   license: Apache-2.0
 ---
 

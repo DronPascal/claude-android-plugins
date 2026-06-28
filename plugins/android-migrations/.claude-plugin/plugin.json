@@ -1,8 +1,10 @@
 {
   "name": "android-migrations",
-  "version": "0.1.0",
-  "description": "On-demand Android migration skills: XML→Compose, AGP-9 upgrade, Play Billing upgrade. Adapted from android/skills (Apache 2.0).",
-  "author": { "name": "DronPascal" },
+  "version": "0.2.0",
+  "description": "On-demand Android migration skills: XML\u2192Compose, AGP-9 upgrade, Play Billing upgrade. Adapted from android/skills (Apache 2.0).",
+  "author": {
+    "name": "DronPascal"
+  },
   "repository": "https://github.com/DronPascal/claude-android-plugins",
   "license": "MIT"
 }
