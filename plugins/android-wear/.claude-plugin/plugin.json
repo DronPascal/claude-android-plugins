@@ -1,0 +1,10 @@
+{
+  "name": "android-wear",
+  "version": "0.1.0",
+  "description": "Wear OS skills: Compose for Wear OS (Material 3). Adapted from android/skills (Apache 2.0).",
+  "author": {
+    "name": "DronPascal"
+  },
+  "repository": "https://github.com/DronPascal/claude-android-plugins",
+  "license": "MIT"
+}

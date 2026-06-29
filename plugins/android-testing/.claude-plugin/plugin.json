@@ -1,0 +1,10 @@
+{
+  "name": "android-testing",
+  "version": "0.1.0",
+  "description": "Android testing skills: test environment & dependency setup. Adapted from android/skills (Apache 2.0).",
+  "author": {
+    "name": "DronPascal"
+  },
+  "repository": "https://github.com/DronPascal/claude-android-plugins",
+  "license": "MIT"
+}

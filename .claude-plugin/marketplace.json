@@ -10,32 +10,120 @@
       "name": "android-sync",
       "description": "Keeps android/skills-derived plugins in sync with upstream. Exposes /android-sync:update.",
       "version": "0.1.0",
-      "author": { "name": "DronPascal" },
+      "author": {
+        "name": "DronPascal"
+      },
       "source": "./plugins/android-sync",
       "category": "productivity"
     },
     {
       "name": "android-core",
-      "description": "Always-on Android development skills: Navigation-3, edge-to-edge. Adapted from github.com/android/skills (Apache 2.0).",
-      "version": "0.1.0",
-      "author": { "name": "DronPascal" },
+      "description": "Always-on Android development skills: Navigation-3, edge-to-edge, adaptive layouts, Compose styles. Adapted from android/skills (Apache 2.0).",
+      "version": "0.3.0",
+      "author": {
+        "name": "DronPascal"
+      },
       "source": "./plugins/android-core",
       "category": "development"
     },
     {
       "name": "android-migrations",
-      "description": "Android migration skills: XML→Compose, AGP-9, Play Billing. Adapted from android/skills (Apache 2.0).",
-      "version": "0.1.0",
-      "author": { "name": "DronPascal" },
+      "description": "Android migration skills: XML\u2192Compose, AGP-9, Play Billing, Camera1\u2192CameraX. Adapted from android/skills (Apache 2.0).",
+      "version": "0.3.0",
+      "author": {
+        "name": "DronPascal"
+      },
       "source": "./plugins/android-migrations",
       "category": "development"
     },
     {
       "name": "android-performance",
-      "description": "Android performance skills: R8 analyzer (more to come). Adapted from android/skills (Apache 2.0).",
-      "version": "0.1.0",
-      "author": { "name": "DronPascal" },
+      "description": "Android performance skills: R8 analyzer, Perfetto SQL & trace analysis. Adapted from android/skills (Apache 2.0).",
+      "version": "0.3.0",
+      "author": {
+        "name": "DronPascal"
+      },
       "source": "./plugins/android-performance",
+      "category": "development"
+    },
+    {
+      "name": "android-wear",
+      "description": "Wear OS skills: Compose for Wear OS (Material 3). Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": {
+        "name": "DronPascal"
+      },
+      "source": "./plugins/android-wear",
+      "category": "development"
+    },
+    {
+      "name": "android-xr",
+      "description": "Android XR skills: Jetpack Compose Glimmer for display glasses. Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": {
+        "name": "DronPascal"
+      },
+      "source": "./plugins/android-xr",
+      "category": "development"
+    },
+    {
+      "name": "android-testing",
+      "description": "Android testing skills: test environment & dependency setup. Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": {
+        "name": "DronPascal"
+      },
+      "source": "./plugins/android-testing",
+      "category": "development"
+    },
+    {
+      "name": "android-play",
+      "description": "Google Play integration skills: Engage SDK. Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": {
+        "name": "DronPascal"
+      },
+      "source": "./plugins/android-play",
+      "category": "development"
+    },
+    {
+      "name": "android-security",
+      "description": "Android security skills: Intent security hardening. Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": {
+        "name": "DronPascal"
+      },
+      "source": "./plugins/android-security",
+      "category": "development"
+    },
+    {
+      "name": "android-ai",
+      "description": "On-device AI skills: App Functions. Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": {
+        "name": "DronPascal"
+      },
+      "source": "./plugins/android-ai",
+      "category": "development"
+    },
+    {
+      "name": "android-identity",
+      "description": "Android identity skills: verified email (Credential Manager). Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": {
+        "name": "DronPascal"
+      },
+      "source": "./plugins/android-identity",
+      "category": "development"
+    },
+    {
+      "name": "android-devtools",
+      "description": "Android developer tooling skills: Android CLI / adb. Adapted from android/skills (Apache 2.0).",
+      "version": "0.1.0",
+      "author": {
+        "name": "DronPascal"
+      },
+      "source": "./plugins/android-devtools",
       "category": "development"
     }
   ]

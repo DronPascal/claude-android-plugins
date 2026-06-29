@@ -1,0 +1,10 @@
+{
+  "name": "android-ai",
+  "version": "0.1.0",
+  "description": "On-device AI skills: App Functions. Adapted from android/skills (Apache 2.0).",
+  "author": {
+    "name": "DronPascal"
+  },
+  "repository": "https://github.com/DronPascal/claude-android-plugins",
+  "license": "MIT"
+}

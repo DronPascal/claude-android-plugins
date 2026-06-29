@@ -1,0 +1,10 @@
+{
+  "name": "android-xr",
+  "version": "0.1.0",
+  "description": "Android XR skills: Jetpack Compose Glimmer for display glasses. Adapted from android/skills (Apache 2.0).",
+  "author": {
+    "name": "DronPascal"
+  },
+  "repository": "https://github.com/DronPascal/claude-android-plugins",
+  "license": "MIT"
+}

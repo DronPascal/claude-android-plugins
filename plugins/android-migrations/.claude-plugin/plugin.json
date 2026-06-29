@@ -1,7 +1,7 @@
 {
   "name": "android-migrations",
-  "version": "0.2.0",
-  "description": "On-demand Android migration skills: XML\u2192Compose, AGP-9 upgrade, Play Billing upgrade. Adapted from android/skills (Apache 2.0).",
+  "version": "0.3.0",
+  "description": "Android migration skills: XML\u2192Compose, AGP-9, Play Billing, Camera1\u2192CameraX. Adapted from android/skills (Apache 2.0).",
   "author": {
     "name": "DronPascal"
   },
