@@ -3,9 +3,9 @@ name: android-cli
 description: >
   This skill should be used when the user asks to "use the android CLI",
   "create a project with the android CLI", "install an Android SDK package
-  via CLI", "run an app with android run", "inspect the layout with
-  android layout", or mentions the android command-line tool, android sdk,
-  android emulator, or android docs.
+  via the android CLI", "run an app with android run", "inspect the layout
+  with android layout", or mentions the android command-line tool, android
+  CLI commands, the android run command, or the android layout inspector.
 upstream:
   source: android/skills
   path: devtools/android-cli

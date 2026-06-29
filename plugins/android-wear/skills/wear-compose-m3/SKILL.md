@@ -3,9 +3,9 @@ name: wear-compose-m3
 description: >
   This skill should be used when the user asks to "build Wear OS UI with
   Material3", "migrate a Wear app to compose-material3", "add Wear Compose
-  Material3", "replace Horologist with Wear M3", or mentions
-  androidx.wear.compose:compose-material3, Wear OS Compose components, or
-  Wear M3 samples.
+  Material3", "build Wear OS UI components", "replace Horologist with Wear
+  M3", or mentions androidx.wear.compose:compose-material3, the WearApp
+  composable, Wear OS Compose components, or Wear M3 samples.
 upstream:
   source: android/skills
   path: wear/wear-compose-m3

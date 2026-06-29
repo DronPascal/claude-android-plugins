@@ -2,10 +2,11 @@
 name: navigation-3
 description: >
   This skill should be used when the user asks about "Navigation 3",
-  "Nav3", "Compose navigation", "type-safe destinations", "back stack
-  in Compose", "deep links", "multiple back stacks", "passing arguments
-  between screens", or mentions Jetpack Navigation 3 APIs, saveable back
-  stack, or migrating from Navigation 2 to Navigation 3.
+  "Nav3", "androidx.navigation3", "type-safe destinations", "back stack in
+  Compose", "deep links", "multiple back stacks", "passing arguments
+  between screens", or mentions Jetpack Navigation 3 APIs, the navigation3
+  artifact, saveable back stack, or migrating from Navigation 2 to
+  Navigation 3.
 upstream:
   source: android/skills
   path: navigation/navigation-3

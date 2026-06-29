@@ -1,22 +1,12 @@
 ---
 name: upstream-diff-analyzer
-description: |
-  Use this agent when a diff patch from the android/skills upstream needs
-  to be summarised into a human-readable changelog for one specific skill.
-
-  <example>
-  Context: /android-sync:update detected body changes in the navigation-3 skill
-  user: (triggered by the sync skill)
-  assistant: "Launching upstream-diff-analyzer for navigation-3."
-  <commentary>Sync flow delegates per-skill changelog to this agent.</commentary>
-  </example>
-
-  <example>
-  Context: Multiple skills changed in upstream
-  user: (triggered by the sync skill in parallel)
-  assistant: "Launching upstream-diff-analyzer for edge-to-edge."
-  <commentary>Agent runs in parallel, one instance per changed skill.</commentary>
-  </example>
+description: >
+  Use this agent when a per-skill diff patch from the android/skills upstream
+  needs to be summarised into a human-readable changelog. Invoke it directly when
+  the sync skill (/android-sync:update) detects body or references changes in a
+  ported skill and delegates changelog generation, and run it in parallel — one
+  instance per changed skill — when several skills change in the same sync run.
+  Do not invoke it without a valid diff.patch path.
 model: sonnet
 color: cyan
 tools: [Read]

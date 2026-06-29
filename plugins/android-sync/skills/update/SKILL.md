@@ -7,7 +7,7 @@ description: >
   the content of android-core / android-migrations / android-performance
   plugins from github.com/android/skills.
 user-invocable: true
-argument-hint: "[--dry-run] [--plugin <name>]"
+argument-hint: "[--dry-run] [--plugin <name>] [--force]"
 allowed-tools: [Bash, Read, Edit, Task]
 ---
 

@@ -3,9 +3,9 @@ name: play-billing-upgrade
 description: >
   This skill should be used when the user asks to "upgrade Play Billing",
   "migrate Play Billing Library", "Play Billing version upgrade",
-  "BillingClient upgrade", or mentions migrating Google Play Billing
-  between major versions, in-app subscription API changes, or
-  ProductDetails/SkuDetails migration.
+  "BillingClient 5 to 7 migration", "upgrade BillingClient", or mentions
+  migrating Google Play Billing between major versions, PENDING_PURCHASES,
+  in-app subscription API changes, or ProductDetails/SkuDetails migration.
 upstream:
   source: android/skills
   path: play/play-billing-library-version-upgrade

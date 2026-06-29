@@ -2,10 +2,10 @@
 name: perfetto-trace-analysis
 description: >
   This skill should be used when the user asks to "analyze a Perfetto
-  trace", "find a performance bottleneck in a trace", "investigate jank
-  from a trace", "profile app startup with Perfetto", "why is the app
-  slow", or mentions trace_processor, thread_state, android_startup, or
-  trace-driven root-cause analysis.
+  trace", "find a performance bottleneck in a Perfetto trace",
+  "investigate jank from a trace", "profile app startup with Perfetto",
+  "debug app slowness with a Perfetto trace", or mentions thread_state,
+  android_startup, or trace-driven root-cause analysis.
 upstream:
   source: android/skills
   path: profilers/perfetto-trace-analysis
