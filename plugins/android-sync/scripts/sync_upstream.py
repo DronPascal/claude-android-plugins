@@ -81,6 +81,26 @@ def body_changed(old_sha: str, new_sha: str, upstream_path: str) -> bool:
     return result.returncode != 0
 
 
+def discover_unported(upstream_dir: Path, ported_paths) -> List[str]:
+    """Return sorted upstream skill paths (dirs containing SKILL.md) that are
+    absent from ported_paths.
+
+    `ported_paths` is a set of upstream paths WITHOUT trailing slash. A SKILL.md
+    nested under a `references/` subtree is ignored (those are sample snippets,
+    not skills). The repo root itself is never treated as a skill.
+    """
+    found: List[str] = []
+    for skill_md in upstream_dir.rglob("SKILL.md"):
+        rel = skill_md.parent.relative_to(upstream_dir)
+        if "references" in rel.parts:
+            continue
+        path = rel.as_posix()
+        if path == "." or path in ported_paths:
+            continue
+        found.append(path)
+    return sorted(found)
+
+
 def rsync_refs(src: Path, dst: Path) -> None:
     """rsync -a --delete src/ dst/ (both dirs). Skip if src missing.
 
@@ -133,9 +153,10 @@ def main() -> int:
 
     notice_path = marketplace / "NOTICE.md"
     notice_text = notice_path.read_text()
-    rows = notice.parse(notice_text)
+    all_rows = notice.parse(notice_text)
+    rows = all_rows
     if args.plugin:
-        rows = [r for r in rows if r["plugin"] == args.plugin]
+        rows = [r for r in all_rows if r["plugin"] == args.plugin]
     if not rows:
         print("No ported skills found (check NOTICE.md / --plugin filter).")
         return 0
@@ -242,6 +263,22 @@ def main() -> int:
             summary_lines.append("Plugin bumps:")
             for plugin, (old, new) in bumps.items():
                 summary_lines.append(f"- {plugin}: {old} → {new}")
+
+    # Offer upstream skills that exist but are not yet ported here.
+    ported_paths = {r["upstream_path"].rstrip("/") for r in all_rows}
+    unported = discover_unported(UPSTREAM_CLONE, ported_paths)
+    if unported:
+        summary_lines.append("")
+        summary_lines.append(f"## New upstream skills not yet ported ({len(unported)})")
+        summary_lines.append("")
+        for path in unported:
+            summary_lines.append(f"- `{path}`")
+        summary_lines.append("")
+        summary_lines.append(
+            "These exist upstream but are absent from this marketplace. Port the "
+            "ones you want with scripts/port_skill.py — the /android-sync:update "
+            "skill offers to help choose a target plugin."
+        )
 
     summary_path = run_dir / "summary.md"
     summary_path.write_text("\n".join(summary_lines) + "\n")
